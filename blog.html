@@ -1,0 +1,38 @@
+---
+layout: default
+title: Blog
+nav_active: blog
+render_with_liquid: true
+description: "Articles on .NET, Azure, API design, microservices, engineering leadership, and software development best practices by Selim YILDIZ."
+---
+
+<article class="blog active" data-page="blog">
+                <header>
+                    <h2 class="h2 article-title">Blog</h2>
+                </header>
+
+                <section class="blog-posts">
+                    <ul class="blog-posts-list">
+                        {% for post in site.posts %}
+                        <li class="blog-post-item">
+                            <a href="{{ post.url }}">
+                                <figure class="blog-banner-box">
+                                    <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">{{ post.category }}</p>
+                                        <span class="dot"></span>
+                                        <time datetime="{{ post.date }}">{{ post.date | date: "%b %d, %Y" }}</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">{{ post.title }}</h3>
+                                    <p class="blog-text">{{ post.description }}</p>
+                                </div>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            </article>
