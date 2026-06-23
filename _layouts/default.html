@@ -1,0 +1,193 @@
+---
+# default layout for all pages
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if page.title and page.title != "Home" %}{{ page.title }} - Selim YILDIZ{% else %}Selim YILDIZ - Software Engineering Lead{% endif %}</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    {% if page.link %}<link rel="canonical" href="{{ page.link }}" />{% else %}<link rel="canonical" href="{{ page.url | absolute_url }}" />{% endif %}
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}" />
+    {% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}" />{% endif %}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@yildizseli" />
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    {% if page.image %}<meta name="twitter:image" content="{{ page.image | absolute_url }}" />{% endif %}
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "{% if page.date %}BlogPosting{% else %}WebPage{% endif %}",
+      "name": "{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}",
+      "description": "{% if page.description %}{{ page.description | escape }}{% else %}{{ site.description | escape }}{% endif %}",
+      "url": "{{ page.url | absolute_url }}"{% if page.date %},
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "author": {
+        "@type": "Person",
+        "name": "Selim YILDIZ",
+        "url": "https://yildizseli.github.io"
+      }{% endif %}
+    }
+    </script>
+
+    <!--
+    - favicon
+    -->
+    <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!--
+    - custom css link
+    -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!--
+    - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXQLH66J4S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-LXQLH66J4S");
+    </script>
+    <!-- Theme: apply saved preference before paint to avoid flash -->
+    <script>
+      (function() {
+        var t = localStorage.getItem('theme');
+        if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      })();
+    </script>
+  </head>
+
+  <body>
+    <main>
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img src="/assets/images/profile_picture_1.jpg" alt="Selim YILDIZ" width="80" />
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Selim YILDIZ">Selim YILDIZ</h1>
+            <p class="title">Software Engineering Lead</p>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+                <a href="mailto:selimyildiz91@gmail.com" class="contact-link">selimyildiz91@gmail.com</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+                <a href="tel:+46700093165" class="contact-link">+46 70 009 31 65</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+                <address>Lund, Skane, Sweden</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="https://stackoverflow.com/users/5519709/selim-yildiz" class="social-link">
+                <ion-icon name="logo-stackoverflow"></ion-icon>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="https://twitter.com/yildizseli" target="_blank" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="https://medium.com/@selimyildiz91" class="social-link">
+                <ion-icon name="logo-medium"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <div class="main-content">
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="/index.html" class="navbar-link{% if page.nav_active == 'about' %} active{% endif %}">About</a>
+            </li>
+            <li class="navbar-item">
+              <a href="/resume.html" class="navbar-link{% if page.nav_active == 'resume' %} active{% endif %}">Resume</a>
+            </li>
+            <li class="navbar-item">
+              <a href="/blog.html" class="navbar-link{% if page.nav_active == 'blog' %} active{% endif %}">Blog</a>
+            </li>
+            <li class="navbar-item">
+              <a href="/contact.html" class="navbar-link{% if page.nav_active == 'contact' %} active{% endif %}">Contact</a>
+            </li>
+            <li class="navbar-item theme-toggle-item">
+              <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">
+                <ion-icon name="sunny-outline" class="theme-icon sun-icon"></ion-icon>
+                <span class="toggle-track"><span class="toggle-thumb"></span></span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        {{ content }}
+      </div>
+    </main>
+
+    <script src="/assets/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
+"
