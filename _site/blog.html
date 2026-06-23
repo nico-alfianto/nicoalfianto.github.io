@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Selim YILDIZ</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="Articles on .NET, Azure, API design, microservices, engineering leadership, and software development best practices by Selim YILDIZ." />
+    <link rel="canonical" href="http://localhost:4000/blog.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blog" />
+    <meta property="og:description" content="Articles on .NET, Azure, API design, microservices, engineering leadership, and software development best practices by Selim YILDIZ." />
+    <meta property="og:url" content="http://localhost:4000/blog.html" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:type" content="website" />
+    
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@yildizseli" />
+    <meta name="twitter:title" content="Blog" />
+    <meta name="twitter:description" content="Articles on .NET, Azure, API design, microservices, engineering leadership, and software development best practices by Selim YILDIZ." />
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Blog",
+      "description": "Articles on .NET, Azure, API design, microservices, engineering leadership, and software development best practices by Selim YILDIZ.",
+      "url": "http://localhost:4000/blog.html"
+    }
+    </script>
+
+    <!--
+    - favicon
+    -->
+    <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!--
+    - custom css link
+    -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!--
+    - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXQLH66J4S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-LXQLH66J4S");
+    </script>
+    <!-- Theme: apply saved preference before paint to avoid flash -->
+    <script>
+      (function() {
+        var t = localStorage.getItem('theme');
+        if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      })();
+    </script>
+  </head>
+
+  <body>
+    <main>
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img src="/assets/images/profile_picture_1.jpg" alt="Selim YILDIZ" width="80" />
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Selim YILDIZ">Selim YILDIZ</h1>
+            <p class="title">Software Engineering Lead</p>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+                <a href="mailto:selimyildiz91@gmail.com" class="contact-link">selimyildiz91@gmail.com</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+                <a href="tel:+46700093165" class="contact-link">+46 70 009 31 65</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+                <address>Lund, Skane, Sweden</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="https://stackoverflow.com/users/5519709/selim-yildiz" class="social-link">
+                <ion-icon name="logo-stackoverflow"></ion-icon>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="https://twitter.com/yildizseli" target="_blank" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="https://medium.com/@selimyildiz91" class="social-link">
+                <ion-icon name="logo-medium"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <div class="main-content">
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="/index.html" class="navbar-link">About</a>
+            </li>
+            <li class="navbar-item">
+              <a href="/resume.html" class="navbar-link">Resume</a>
+            </li>
+            <li class="navbar-item">
+              <a href="/blog.html" class="navbar-link active">Blog</a>
+            </li>
+            <li class="navbar-item">
+              <a href="/contact.html" class="navbar-link">Contact</a>
+            </li>
+            <li class="navbar-item theme-toggle-item">
+              <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">
+                <ion-icon name="sunny-outline" class="theme-icon sun-icon"></ion-icon>
+                <span class="toggle-track"><span class="toggle-thumb"></span></span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <article class="blog active" data-page="blog">
+                <header>
+                    <h2 class="h2 article-title">Blog</h2>
+                </header>
+
+                <section class="blog-posts">
+                    <ul class="blog-posts-list">
+                        
+                        <li class="blog-post-item">
+                            <a href="/agile/2025/07/16/when-mvp-thinking-meets-reality.html">
+                                <figure class="blog-banner-box">
+                                    <img src="/assets/images/2025-07-16-when-mvp-thinking-meets-reality.webp" alt="When MVP Thinking Meets Reality" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Agile</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2025-07-16 00:00:00 +0200">Jul 16, 2025</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">When MVP Thinking Meets Reality</h3>
+                                    <p class="blog-text">The idea is simple: build something small, test it quickly, and improve it over time. It's a great way to move fast - until it starts causing problems.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/.net,%20azure,%20architecture/2025/03/24/building-robust-applications-with-the-reliable-web-app-pattern-for-net.html">
+                                <figure class="blog-banner-box">
+                                    <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*vQ_oUnfGe5yBSpVm9WUlCQ.jpeg" alt="Building Robust Applications with the Reliable Web App Pattern for .NET" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">.NET, Azure, Architecture</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2025-03-24 00:00:00 +0100">Mar 24, 2025</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Building Robust Applications with the Reliable Web App Pattern for .NET</h3>
+                                    <p class="blog-text">The Reliable Web App pattern is a set of architectural guidelines designed to enhance the dependability of web applications.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/security/2024/12/29/understanding-web-authentication-session-based-authentication-vs-json-web-tokens-jwts.html">
+                                <figure class="blog-banner-box">
+                                    <img src="/assets/images/2024-12-29-understanding-web-authentication-session-based-authentication-vs-json-web-tokens-jwts.webp" alt="Understanding Web Authentication: Session-Based Authentication vs. JSON Web Tokens (JWTs)" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Security</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2024-12-29 00:00:00 +0100">Dec 29, 2024</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Understanding Web Authentication: Session-Based Authentication vs. JSON Web Tokens (JWTs)</h3>
+                                    <p class="blog-text">A Deep Dive into Session-Based Authentication and JWTs: Understanding Their Strengths, Challenges, and Best Use Cases.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/tech/2024/11/25/the-middle-innings-of-ai-highlights-from-microsoft-ignite-2024.html">
+                                <figure class="blog-banner-box">
+                                    <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*hQYVg5ekxt4Gr_pyktk2wQ.png" alt="The Middle Innings of AI: Highlights from Microsoft Ignite 2024" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Tech</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2024-11-25 00:00:00 +0100">Nov 25, 2024</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">The Middle Innings of AI: Highlights from Microsoft Ignite 2024</h3>
+                                    <p class="blog-text">Microsoft CEO Satya Nadella heralded a new era in computing, declaring that we have entered the "middle innings of AI."</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/tech/2024/11/22/update-conference-2024-my-highlights-from-the-cutting-edge-of-net-and-ai.html">
+                                <figure class="blog-banner-box">
+                                    <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*ph43sxevLFeLvh-cBPgLZA.png" alt="Update Conference 2024: My Highlights from the Cutting Edge of .NET and AI" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Tech</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2024-11-22 00:00:00 +0100">Nov 22, 2024</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Update Conference 2024: My Highlights from the Cutting Edge of .NET and AI</h3>
+                                    <p class="blog-text">Here are my expanded thoughts and takeaways from the Update Conference 2024.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/security/2024/04/04/understanding-the-differences-between-cookies-sessions-and-tokens.html">
+                                <figure class="blog-banner-box">
+                                    <img src="/assets/images/2024-04-04-understanding-the-differences-between-cookies-sessions-and-tokens.webp" alt="Understanding the Differences Between Cookies, Sessions, and Tokens" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Security</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2024-04-04 00:00:00 +0200">Apr 04, 2024</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Understanding the Differences Between Cookies, Sessions, and Tokens</h3>
+                                    <p class="blog-text">Understanding the roles of cookies, sessions, and tokens in the authentication process.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/git/2023/09/27/choosing-the-right-code-repository-strategy-monorepos-or-microrepos.html">
+                                <figure class="blog-banner-box">
+                                    <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*o272TN5AdpMxjd94HDY96A.png" alt="Choosing the Right Code Repository Strategy: Monorepos or Microrepos?" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Git</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-09-27 00:00:00 +0200">Sep 27, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Choosing the Right Code Repository Strategy: Monorepos or Microrepos?</h3>
+                                    <p class="blog-text">Exploring the differences between Monorepo and Microrepo strategies, and help you determine which one is right for you.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/.net/2023/09/09/rest-api-best-practices-and-design.html">
+                                <figure class="blog-banner-box">
+                                    <img src="/assets/images/2023-09-09-rest-api-best-practices-and-design.webp" alt="REST API — Best Practices and Design" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">.NET</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-09-09 00:00:00 +0200">Sep 09, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">REST API — Best Practices and Design</h3>
+                                    <p class="blog-text">Core principles that underlie effective REST API design.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/ai/2023/08/16/why-ai-cant-replace-software-developers-yet.html">
+                                <figure class="blog-banner-box">
+                                    <img src="/assets/images/2023-08-16-why-ai-cant-replace-software-developers-yet.webp" alt="Why AI Can’t Replace Software Developers (Yet)" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">AI</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-08-16 00:00:00 +0200">Aug 16, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Why AI Can’t Replace Software Developers (Yet)</h3>
+                                    <p class="blog-text">While AI can help with tasks in software development, it can’t fully replace the human skill of understanding complex requirements (yet).</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/microservice/2023/08/16/microservices-evolution.html">
+                                <figure class="blog-banner-box">
+                                    <img src="/assets/images/2023-08-16-microservices-evolution.jpg" alt="Microservices Evolution Starts with Monolith: Here's Why" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Microservice</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-08-16 00:00:00 +0200">Aug 16, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Microservices Evolution Starts with Monolith: Here's Why</h3>
+                                    <p class="blog-text">Why you shouldn't start a new project with microservices, even if you're sure your application will be big enough to make it worthwhile.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/ai/2023/08/02/overflowai-introduction.html">
+                                <figure class="blog-banner-box">
+                                    <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*0b9Bi7ogdC472wURwMxtYg.png" alt="Introducing OverflowAI by Stack Overflow" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">AI</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-08-02 00:00:00 +0200">Aug 02, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Introducing OverflowAI by Stack Overflow</h3>
+                                    <p class="blog-text">Introducing OverflowAI: Stack Overflow's Leap into Generative AI.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/unit%20testing/2023/07/12/rethinking-unit-testing.html">
+                                <figure class="blog-banner-box">
+                                    <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*CX7SwRDQaI3lPmHO-K8vlA.png" alt="Rethinking Unit Testing: An Effective Approach for Software Development" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Unit testing</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-07-12 00:00:00 +0200">Jul 12, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Rethinking Unit Testing: An Effective Approach for Software Development</h3>
+                                    <p class="blog-text">The pitfalls of excessive reliance on unit testing and shedding light on a more practical and efficient approach to testing software.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/linq,%20c%23/2023/06/21/useful-linq-extensions.html">
+                                <figure class="blog-banner-box">
+                                    <img src="/assets/images/2023-06-21-useful-linq-extensions.jpg" alt="10 Useful extension methods in LINQ" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">LINQ, C#</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-06-21 00:00:00 +0200">Jun 21, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">10 Useful extension methods in LINQ</h3>
+                                    <p class="blog-text">10 useful custom extension methods in LINQ that can help you write more concise and expressive code.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/tech/2023/06/12/clean-code-performance.html">
+                                <figure class="blog-banner-box">
+                                    <img src="/assets/images/2023-06-12-clean-code-performance.jpg" alt="'Clean' Code, Horrible Performance" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Tech</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-06-12 00:00:00 +0200">Jun 12, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">'Clean' Code, Horrible Performance</h3>
+                                    <p class="blog-text">Clean Code is important, but it's not the only thing that matters. When writing code, it's important to strike a balance.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/ai/2023/06/06/chatgpt-swagger.html">
+                                <figure class="blog-banner-box">
+                                    <img src="/assets/images/2023-06-06-chatgpt-swagger.jpg" alt="How ChatGPT Can Help with Creating a Swagger Script for an API Endpoint" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">AI</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-06-06 00:00:00 +0200">Jun 06, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">How ChatGPT Can Help with Creating a Swagger Script for an API Endpoint</h3>
+                                    <p class="blog-text">How ChatGPT, a powerful language model, can assist in creating a Swagger script for an API endpoint.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/ai,%20microsoft/2023/05/30/microsoft-build-2023.html">
+                                <figure class="blog-banner-box">
+                                    <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*ErX-R8nYZ1S_s6QXBaBOaw.png" alt="Microsoft Build 2023: The Rise of No-Code Developers: Anyone Can Code Now!" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">AI, Microsoft</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-05-30 00:00:00 +0200">May 30, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Microsoft Build 2023: The Rise of No-Code Developers: Anyone Can Code Now!</h3>
+                                    <p class="blog-text">With AI-powered tools and prompt engineering techniques, Microsoft aims to make coding accessible to everyone.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/tool/2023/05/23/json-crack.html">
+                                <figure class="blog-banner-box">
+                                    <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*3GNLOg6Q6kySKaFrUEUdjg.png" alt="Json Crack: Seamlessly Visualize Your JSON Data Instantly Into Graphs" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Tool</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-05-23 00:00:00 +0200">May 23, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Json Crack: Seamlessly Visualize Your JSON Data Instantly Into Graphs</h3>
+                                    <p class="blog-text">An innovative, open source JSON visualization app. Brings data to life through captivating graphs.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/agile/2023/05/16/agile-tool-not-goal.html">
+                                <figure class="blog-banner-box">
+                                    <img src="/assets/images/2023-05-16-agile-tool-not-goal.jpg" alt="Agile: A Tool, not a Goal" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Agile</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-05-16 00:00:00 +0200">May 16, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Agile: A Tool, not a Goal</h3>
+                                    <p class="blog-text">Essence of agility and illustrate its importance with a real-life example from the perspective of a software engineer.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/career/2023/05/08/never-too-late.html">
+                                <figure class="blog-banner-box">
+                                    <img src="/assets/images/2023-05-08-never-too-late.jpg" alt="Why It's Never Too Late to Become a Software Engineer" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Career</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-05-08 00:00:00 +0200">May 08, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Why It's Never Too Late to Become a Software Engineer</h3>
+                                    <p class="blog-text">Why it's never too late to become a software engineer and how you can make a successful transition into this exciting field.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/.net/2023/05/02/optimize-database-queries.html">
+                                <figure class="blog-banner-box">
+                                    <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*pVufWHWRQOG8zsjprmssCw@2x.jpeg" alt="5 Techniques to Optimize Database Queries in .NET" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">.NET</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-05-02 00:00:00 +0200">May 02, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">5 Techniques to Optimize Database Queries in .NET</h3>
+                                    <p class="blog-text">Several techniques and best practices that can help developers optimize database queries in .NET</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/ai,%20chatgpt/2023/04/26/chatgpt-unit-test.html">
+                                <figure class="blog-banner-box">
+                                    <img src="/assets/images/2023-04-26-chatgpt-unit-test.jpg" alt="How ChatGPT Can Help You in Generating Unit Test Scenarios" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">AI, ChatGPT</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-04-26 00:00:00 +0200">Apr 26, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">How ChatGPT Can Help You in Generating Unit Test Scenarios</h3>
+                                    <p class="blog-text">ChatGPT can generate a wide range of test scenarios, helping you achieve better test coverage and uncover potential issues in your code.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/.net%20core,%20security/2023/04/20/redis-security.html">
+                                <figure class="blog-banner-box">
+                                    <img src="/assets/images/2023-04-20-redis-security.jpg" alt="Securing Your .NET Core Application with Redis Distributed Caching" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">.NET Core, Security</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-04-20 00:00:00 +0200">Apr 20, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Securing Your .NET Core Application with Redis Distributed Caching</h3>
+                                    <p class="blog-text">How to use Redis distributed caching to improve the security of a .NET Core application by implementing rate limiting.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/best%20practices/2023/04/12/boost-api-performance.html">
+                                <figure class="blog-banner-box">
+                                    <img src="/assets/images/2023-04-12-boost-api-performance.jpg" alt="How to Boost Your API Performance" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Best Practices</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-04-12 00:00:00 +0200">Apr 12, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">How to Boost Your API Performance</h3>
+                                    <p class="blog-text">Exploring some of the common reasons for slow APIs and provide solutions/tips for each.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/tech/2023/04/06/cache-invalidation.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-20.jpg" alt="Why Cache Invalidation is Hard and How to Solve It" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Tech</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-04-06 00:00:00 +0200">Apr 06, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Why Cache Invalidation is Hard and How to Solve It</h3>
+                                    <p class="blog-text">What cache invalidation is, why it is hard with real-world examples and some techniques for dealing with it.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/tech/2023/04/02/redis-leaderboards.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-19.jpg" alt="Real-time Leaderboards and Counters with Redis" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Tech</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-04-02 00:00:00 +0200">Apr 02, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Real-time Leaderboards and Counters with Redis</h3>
+                                    <p class="blog-text">Data structures and commands provided by Redis, and examples of how they can be used to implement real-time leaderboards.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/tech/2023/03/29/github-copilot.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-18.png" alt="Github Copilot: The Good, the Bad, and the Controversial" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Tech</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-03-29 00:00:00 +0200">Mar 29, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Github Copilot: The Good, the Bad, and the Controversial</h3>
+                                    <p class="blog-text">Copilot has the potential to revolutionize the way developers work and it comes with both potential benefits and concerns.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/devops/2023/03/24/git-extensions.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-17.jpg" alt="Say Goodbye to the Command Line: GIT Extensions Makes Git Easier Than Ever" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Devops</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-03-24 00:00:00 +0100">Mar 24, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Say Goodbye to the Command Line: GIT Extensions Makes Git Easier Than Ever</h3>
+                                    <p class="blog-text">GIT Extensions makes it easy for developers to use Git without needing to use the command-line interface.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/microservices/2023/03/16/microservices-dotnet.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-16.jpg" alt="Overview of Microservices in .NET" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Microservices</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-03-16 00:00:00 +0100">Mar 16, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Overview of Microservices in .NET</h3>
+                                    <p class="blog-text">.NET is a versatile platform that provides a wide range of tools and frameworks to help developers create, deploy, and manage microservices</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/orm/2023/03/13/dapper-vs-efcore.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-15.jpg" alt="Dapper vs EF Core: Which ORM Framework Should You Choose for Your .NET Application" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">ORM</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-03-13 00:00:00 +0100">Mar 13, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Dapper vs EF Core: Which ORM Framework Should You Choose for Your .NET Application</h3>
+                                    <p class="blog-text">Detailed comparison of Dapper-EF Core and offer insights on when to choose one over the other.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/devops/2023/03/05/managing-large-repos.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-14.jpg" alt="Mastering GitHub: How to Manage Large Repositories like a Pro" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Devops</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-03-05 00:00:00 +0100">Mar 05, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Mastering GitHub: How to Manage Large Repositories like a Pro</h3>
+                                    <p class="blog-text">How to manage large repositories on Github, including how to split them, use submodules, optimize performance, and avoid common pitfalls</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/security/2023/03/03/api-security-dotnet.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-13.jpg" alt="Making Your API Secure in .NET: Tips and Tricks to Keep Hackers at Bay" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Security</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-03-03 00:00:00 +0100">Mar 03, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Making Your API Secure in .NET: Tips and Tricks to Keep Hackers at Bay</h3>
+                                    <p class="blog-text">Deep dive into more specific tips and tricks for making your API secure in .NET.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/best%20practices/2023/02/27/premature-optimization.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-12.jpg" alt="Why Premature Optimization is the Enemy of Good Software Development" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Best Practices</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-02-27 00:00:00 +0100">Feb 27, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Why Premature Optimization is the Enemy of Good Software Development</h3>
+                                    <p class="blog-text">Premature optimization can lead to overly complex code that is difficult to read, understand, and maintain. It's important to avoid from it.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/devops/2023/02/23/pr-templates.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-11.jpg" alt="How Pull Request Templates Can Improve Your GitHub Workflow" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Devops</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-02-23 00:00:00 +0100">Feb 23, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">How Pull Request Templates Can Improve Your GitHub Workflow</h3>
+                                    <p class="blog-text">Using Pull Request templates in GitHub to improve the PR writing process and streamline the review process.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/best%20practices/2023/02/20/continuous-learning.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-10.jpg" alt="Continuous Learning: Overcoming Challenges for a Thriving Career as a Software Developer" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Best Practices</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-02-20 00:00:00 +0100">Feb 20, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Continuous Learning: Overcoming Challenges for a Thriving Career as a Software Developer</h3>
+                                    <p class="blog-text">Despite the challenges, it is important for software developers to embrace continuous learning and to make it a priority in their careers.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/best%20practices/2023/02/14/the-evolution-of-cloud-computing-in-software-development.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-9.jpg" alt="The Evolution of Cloud Computing in Software Development" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Best Practices</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-02-14 00:00:00 +0100">Feb 14, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">The Evolution of Cloud Computing in Software Development</h3>
+                                    <p class="blog-text">Cloud computing has become an essential part of modern software development, providing businesses and developers with a range of benefits. The cloud has undergone a rapid transformation in recent years, and its impact on software development has been significant.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/best%20practices/2023/02/03/the-surprising-similarities-between-playing-chess-and-developing-software.html">
+                                <figure class="blog-banner-box">
+                                    <img src="/assets/images/2023-02-03-the-surprising-similarities-between-playing-chess-and-developing-software.jpg" alt="The Surprising Similarities between Playing Chess and Developing Software" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Best Practices</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-02-03 00:00:00 +0100">Feb 03, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">The Surprising Similarities between Playing Chess and Developing Software</h3>
+                                    <p class="blog-text">How skills developed in chess can be applied to improve software development skills and vice versa.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/security/2023/02/01/how-to-build-secure-applications-a-guide-to-owasp-best-practices.html">
+                                <figure class="blog-banner-box">
+                                    <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*51K5gUhSwwTeMfgC" alt="How to Build Secure Applications: A Guide to OWASP Best Practices" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Security</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-02-01 00:00:00 +0100">Feb 01, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">How to Build Secure Applications: A Guide to OWASP Best Practices</h3>
+                                    <p class="blog-text">10 OWASP best practices that can help you build and maintain secure web applications.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/technical/2023/02/01/from-problems-to-progress-a-5-step-guide-to-approaching-problems-as-a-software-developer.html">
+                                <figure class="blog-banner-box">
+                                    <img src="/assets/images/2023-02-01-from-problems-to-progress-a-5-step-guide-to-approaching-problems-as-a-software-developer.jpg" alt="From Problems to Progress: A 5-Step Guide to Approaching Problems as a Software Developer" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Technical</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-02-01 00:00:00 +0100">Feb 01, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">From Problems to Progress: A 5-Step Guide to Approaching Problems as a Software Developer</h3>
+                                    <p class="blog-text">As a software developer, the ability to approach problems in a structured manner is critical to delivering high-quality solutions.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/technical/2023/01/19/csharp-extension-methods.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-5.jpg" alt="10 Useful extension methods in C#" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Technical</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-01-19 00:00:00 +0100">Jan 19, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">10 Useful extension methods in C#</h3>
+                                    <p class="blog-text">10 useful extension methods that can help you write more efficient and maintainable code in C#.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/technical/2023/01/15/developer-mistakes.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-4.jpg" alt="The Top 10 Mistakes Developers Make and How to Avoid Them" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Technical</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-01-15 00:00:00 +0100">Jan 15, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">The Top 10 Mistakes Developers Make and How to Avoid Them</h3>
+                                    <p class="blog-text">As a software developer, it's easy to make mistakes. In this article, we will discuss the top 10 mistakes that developers make and how to avoid them.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/technical/2023/01/12/lessons-learned-my-journey-to-5000-reputations-on-stack-overflow.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-3.jpg" alt="Lessons Learned: My Journey to 5000 Reputations on Stack Overflow" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Technical</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-01-12 00:00:00 +0100">Jan 12, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Lessons Learned: My Journey to 5000 Reputations on Stack Overflow</h3>
+                                    <p class="blog-text">I have been trying to be active in Stack Overflow for almost 3 years as an "answerer" and I just reached 5000 reputations last week which was my goal.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/books/2023/01/10/how-to-talk-to-anyone-from-a-developers-eye.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-2.jpg" alt="How To Talk To Anyone from a Developer’s Eye" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Books</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-01-10 00:00:00 +0100">Jan 10, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">How To Talk To Anyone from a Developer’s Eye</h3>
+                                    <p class="blog-text">Enter "How to Talk to Anyone" by Leil Lowndes, a book that teaches you how to communicate effectively in any social situation.</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="blog-post-item">
+                            <a href="/technical/2023/01/04/grpc-vs-rest.html">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-1.jpg" alt="gRPC vs REST: Simple comparison" loading="lazy" class="blog-image">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Technical</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-01-04 00:00:00 +0100">Jan 04, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">gRPC vs REST: Simple comparison</h3>
+                                    <p class="blog-text">A very basic comparison/differences between gRPC and REST</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </section>
+            </article>
+
+      </div>
+    </main>
+
+    <script src="/assets/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
+"
